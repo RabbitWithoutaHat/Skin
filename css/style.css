@@ -153,11 +153,13 @@ body {
   transition: translate 600ms;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
+  opacity: 0;
 }
 
 .menu--active {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
+  opacity: 1;
 }
 
 @media (max-width: 480px) {
@@ -274,7 +276,8 @@ body {
 
 @media (max-width: 1010px) {
   .hero {
-    background-position: top left 30%;
+    background-position: top left 35%;
+    background-size: 160%;
   }
 }
 
