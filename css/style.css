@@ -6,6 +6,33 @@
 .container {
   max-width: 1170px;
   margin: auto;
+  min-width: 320px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
 }
 
 @font-face {
@@ -91,6 +118,12 @@ body {
   text-align: right;
 }
 
+@media (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
 .navbar__phone {
   font-family: 'Proxima Nova Semibold', sans-serif;
   display: block;
@@ -127,6 +160,12 @@ body {
           transform: translateY(0%);
 }
 
+@media (max-width: 480px) {
+  .menu--active {
+    padding: 0;
+  }
+}
+
 .menu__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,15 +175,36 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0 44px;
+}
+
+@media (max-width: 480px) {
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+  }
 }
 
 .menu__link {
   font-size: 17px;
-  line-height: 25px;
+  line-height: 20px;
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
+  margin: 7px;
+}
+
+@media (max-width: 480px) {
+  .menu__link {
+    margin: 10px;
+  }
 }
 
 .menu-button {
@@ -177,6 +237,12 @@ body {
   margin: 2px;
 }
 
+@media (max-width: 600px) {
+  .menu-button {
+    border: none;
+  }
+}
+
 .logo__text {
   display: block;
   font-size: 18px;
@@ -193,11 +259,23 @@ body {
   color: #7b7b79;
 }
 
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+}
+
 .hero {
   background: #f1f1f1 url(../img/hero/hero-bg.jpg) no-repeat top;
   background-size: cover;
   padding: 100px 0 270px;
   margin-top: 80px;
+}
+
+@media (max-width: 1010px) {
+  .hero {
+    background-position: top left 30%;
+  }
 }
 
 .hero__title {
