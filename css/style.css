@@ -122,14 +122,13 @@ input[type="checkbox"]:checked + label::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40px;
-  margin-right: 40px;
-  margin-left: 0;
+  margin: 20px 40px 40px 0;
 }
 
 @media (max-width: 1110px) {
   .checkbox-label {
     margin-bottom: 20px;
+    margin-top: 0;
   }
 }
 
