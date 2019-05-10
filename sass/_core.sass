@@ -1,6 +1,21 @@
 body
    +light
    color: $text-color
+img
+   max-width: 100%
+.section
+   margin-top: 100px
+   @media (max-width: 480px)
+      margin-top: 80px
+   &-title
+      +bold
+      font-size: 30px
+      text-transform: uppercase
+      text-align: center
+   &__title
+      margin-bottom: 100px
+      @media (max-width: 480px)
+         margin-bottom: 60px
 .button-o
    +semibold
    padding: 17px 22px
@@ -9,6 +24,7 @@ body
    text-transform: uppercase
    color: $primary
    background-color: transparent
+   text-decoration: none
 .button
    +semibold
    padding: 25px 44px
@@ -18,6 +34,26 @@ body
    background-color: #507fe1
    border: none
    outline: none
+   text-decoration: none
+   &-fitting
+      +regular
+      background-color: $white
+      color: #6a99e9
+      line-height: 11px
+      font-size: 11px
+   &-add
+      +regular
+      background-color: #6a99e9
+      color: $white
+      border: none
+      line-height: 11px
+      font-size: 11px
+   &-like
+      +regular
+      background-color: #417cde
+      color: $white
+      font-size: 19px
+      line-height: 15px
 .input
    height: 80px
    padding-left: 30px

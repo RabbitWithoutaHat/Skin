@@ -7,15 +7,21 @@
       background-position: top left 35%
       background-size: 160%
       padding-bottom: 200px
+      @media (max-width: 480px)
+         padding-bottom: 230px
    &__title
       +light
       max-width: 262px
       font-size: 30px
       color: $text-color
       margin-bottom: 35px
+      @media (max-width: 480px)
+         margin-bottom: 15px
    &__subtitle
       +bold
       font-size: 30px
       color: #121212
       margin-bottom: 65px
       display: block
+      @media (max-width: 480px)
+         margin-bottom: 20px

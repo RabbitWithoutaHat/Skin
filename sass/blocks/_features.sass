@@ -1,0 +1,21 @@
+.features
+   &-block
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      &__item
+         text-align: center
+         flex-basis: 33%
+         margin-bottom: 100px
+         @media (max-width: 600px)
+            flex-basis: 50%
+         @media (max-width: 480px)
+            flex-basis: 100%
+            margin-bottom: 50px
+      img
+         height: 50px
+      &__text
+         text-align: center
+         max-width: 180px
+         margin: 0 auto
+         margin-top: 10px

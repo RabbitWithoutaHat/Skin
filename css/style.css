@@ -72,6 +72,37 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
+.section {
+  margin-top: 100px;
+}
+
+@media (max-width: 480px) {
+  .section {
+    margin-top: 80px;
+  }
+}
+
+.section-title {
+  font-family: 'Proxima Nova Bold', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section__title {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 480px) {
+  .section__title {
+    margin-bottom: 60px;
+  }
+}
+
 .button-o {
   font-family: 'Proxima Nova Semibold', sans-serif;
   padding: 17px 22px;
@@ -80,6 +111,7 @@ body {
   text-transform: uppercase;
   color: #507fe1;
   background-color: transparent;
+  text-decoration: none;
 }
 
 .button {
@@ -91,6 +123,32 @@ body {
   background-color: #507fe1;
   border: none;
   outline: none;
+  text-decoration: none;
+}
+
+.button-fitting {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  background-color: #fff;
+  color: #6a99e9;
+  line-height: 11px;
+  font-size: 11px;
+}
+
+.button-add {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  background-color: #6a99e9;
+  color: #fff;
+  border: none;
+  line-height: 11px;
+  font-size: 11px;
+}
+
+.button-like {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  background-color: #417cde;
+  color: #fff;
+  font-size: 19px;
+  line-height: 15px;
 }
 
 .input {
@@ -150,6 +208,7 @@ input[type="checkbox"]:checked + label::before {
   top: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 2;
 }
 
 .navbar-wrap {
@@ -333,12 +392,24 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
+@media (max-width: 1010px) and (max-width: 480px) {
+  .hero {
+    padding-bottom: 230px;
+  }
+}
+
 .hero__title {
   font-family: 'Proxima Nova Light', sans-serif;
   max-width: 262px;
   font-size: 30px;
   color: #262626;
   margin-bottom: 35px;
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    margin-bottom: 15px;
+  }
 }
 
 .hero__subtitle {
@@ -349,9 +420,21 @@ input[type="checkbox"]:checked + label::before {
   display: block;
 }
 
+@media (max-width: 480px) {
+  .hero__subtitle {
+    margin-bottom: 20px;
+  }
+}
+
 .offer {
   background-color: #f1f1f1;
   padding: 129px 0;
+}
+
+@media (max-width: 480px) {
+  .offer {
+    padding: 80px 0;
+  }
 }
 
 .offer__block {
@@ -445,5 +528,157 @@ input[type="checkbox"]:checked + label::before {
     height: 60px;
     padding: 15px;
   }
+}
+
+.features-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features-block__item {
+  text-align: center;
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-block__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.features-block img {
+  height: 50px;
+}
+
+.features-block__text {
+  text-align: center;
+  max-width: 180px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.catalog {
+  background-color: #f1f1f1;
+  padding: 100px 0;
+}
+
+.catalog-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 630px) {
+  .catalog-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.catalog-block__item {
+  -ms-flex-preferred-size: 42%;
+      flex-basis: 42%;
+  position: relative;
+  -webkit-box-shadow: 7px 5px 21px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1100px) {
+  .catalog-block__item {
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
+  }
+}
+
+.catalog-block__tag {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 30px;
+  padding: 10px;
+  background: rgba(80, 127, 225, 0.6);
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media (max-width: 400px) {
+  .catalog-block__tag {
+    top: 0;
+    left: 0;
+    height: 25px;
+    line-height: 13px;
+    padding: 7px;
+  }
+}
+
+.catalog-block__img {
+  text-align: center;
+  display: block;
+}
+
+.catalog-block__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.catalog-block__button {
+  padding: 10px;
+  text-transform: uppercase;
+  height: 30px;
+  border: none;
+}
+
+@media (max-width: 400px) {
+  .catalog-block__button {
+    padding: 7px;
+  }
+}
+
+.catalog__link {
+  text-align: center;
+  margin: 60px 0 46px;
+}
+
+@media (max-width: 400px) {
+  .catalog__more {
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+}
+
+.catalog__descr {
+  font-family: 'Proxima Nova Light', sans-serif;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 24px;
 }
 /*# sourceMappingURL=style.css.map */
