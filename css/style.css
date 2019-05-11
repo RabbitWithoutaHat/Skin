@@ -862,4 +862,86 @@ input[type="checkbox"]:checked + label::before {
 .price-item__button:hover {
   cursor: pointer;
 }
+
+.step {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .step {
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .step {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.steps {
+  text-align: center;
+  background-color: #f1f1f1;
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+
+.steps-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .steps-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.step__descr {
+  padding: 7px;
+  margin: auto;
+  font-size: 14px;
+}
+
+.step__title {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.step:not(:last-child):before {
+  content: '';
+  height: 2px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 34%;
+  right: -62%;
+  background-color: rgba(126, 123, 120, 0.5);
+}
+
+@media (max-width: 991px) {
+  .step:not(:last-child):before {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
