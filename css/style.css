@@ -949,6 +949,7 @@ input[type="checkbox"]:checked + label::before {
 .reviews {
   margin-top: 0;
   padding-bottom: 260px;
+  padding-top: 40px;
   background-color: #f1f1f1;
 }
 
