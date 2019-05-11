@@ -948,7 +948,7 @@ input[type="checkbox"]:checked + label::before {
 
 .reviews {
   margin-top: 0;
-  padding: 100px 0 260px;
+  padding-bottom: 260px;
   background-color: #f1f1f1;
 }
 
@@ -968,6 +968,13 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1200px) {
+  .reviews-slider__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .reviews-slider__text {
   font-size: 15px;
   line-height: 20px;
@@ -977,6 +984,13 @@ input[type="checkbox"]:checked + label::before {
   font-style: italic;
   border-radius: 10px;
   position: relative;
+  max-width: 360px;
+}
+
+@media (max-width: 1200px) {
+  .reviews-slider__text {
+    max-width: 100%;
+  }
 }
 
 .reviews-slider__text::after {
