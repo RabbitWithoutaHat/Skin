@@ -21,7 +21,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .container {
     max-width: 100%;
     padding: 0 30px;
@@ -680,5 +680,103 @@ input[type="checkbox"]:checked + label::before {
   text-align: center;
   font-size: 16px;
   margin-top: 24px;
+}
+
+.blog {
+  margin-bottom: 80px;
+}
+
+.blog__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 69px;
+}
+
+.blog__title {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-size: 24px;
+}
+
+@media (max-width: 480px) {
+  .blog__title {
+    font-size: 22px;
+    padding-right: 15px;
+  }
+}
+
+.blog__link-more {
+  font-family: 'Proxima Nova Semibold', sans-serif;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #507fe1;
+}
+
+.blog-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1199px) {
+  .blog-list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.blog-list__item {
+  margin-bottom: 30px;
+}
+
+.blog-list__img {
+  height: 200px;
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .blog-list__img {
+    height: 160px;
+  }
+}
+
+.blog-list__text {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80px;
+}
+
+@media (max-width: 480) {
+  .blog-list__text {
+    min-height: 60px;
+  }
+}
+
+.blog-item {
+  -webkit-box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.07);
+          box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.07);
+}
+
+@media (max-width: 1199px) {
+  .blog-item {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
