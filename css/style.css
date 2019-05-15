@@ -1146,4 +1146,61 @@ input[type="checkbox"]:checked + label::before {
     margin: 30px auto;
   }
 }
+
+.factory-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.factory-block__img {
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+}
+
+@media (max-width: 991px) {
+  .factory-block__img {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.factory-block__text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  padding: 0px 70px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@media (max-width: 991px) {
+  .factory-block__text {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding: 0 20px;
+  }
+}
+
+.factory-block__text p {
+  margin: 0;
+}
+
+.factory-block__text p:not(:first-child) {
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .factory-block__text {
+    margin-top: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
