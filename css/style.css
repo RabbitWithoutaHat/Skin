@@ -1203,4 +1203,47 @@ input[type="checkbox"]:checked + label::before {
     margin-top: 40px;
   }
 }
+
+.contacts {
+  background-color: #f1f1f1;
+  padding: 100px 0px 50px;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contacts__item {
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .contacts__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.contacts__img {
+  display: block;
+  text-align: center;
+  margin: 0px auto 20px;
+}
+
+.contacts__text {
+  font-family: 'Proxima Nova Regular', sans-serif;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  margin: 0;
+  margin-bottom: 40px;
+}
 /*# sourceMappingURL=style.css.map */
