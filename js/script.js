@@ -58,4 +58,14 @@ $(window).load(function() {
       return false;
    });
    $('input[type="tel"]').mask("+ 7 (999) 999-99-99");
+
+   var reviews = $('.reviews');
+   var reviewsTop = reviews.offset().top;
+   $(window).bind('scroll', function(){
+      var windowTop = $(this).scrollTop();
+      if (windowTop > reviewsTop) {
+         $('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aabf86d259690123c1d884b029e522f9274d5b02f341eb00fc152fb3ae7ca4039&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=false"></script>');
+         $(window).unbind('scroll');
+      }
+   });
 });
