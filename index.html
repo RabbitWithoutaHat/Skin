@@ -5,8 +5,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Фабрика скинал</title>
-   <link rel="stylesheet" href="/css/normalize.css">
+   <title>Фабрика скинали</title>
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/twentytwenty.css">
    <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -32,8 +33,6 @@
             <div class="navbar-wrap">
                <button class="menu-button">
                   <span class="menu-button__line"></span>
-                  <span class="menu-button__line"></span>
-                  <span class="menu-button__line"></span>
                </button>
                <div class="logo navbar__logo">
                   <strong class="logo__text">Фабрика скинали №1</strong>
@@ -45,9 +44,9 @@
                </div>
                <div class="navbar__landline">
                   <a class="navbar__phone" href="tel:+79121234567">+7 912 123-45-67</a>
-                  <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
+                  <a  class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                </div>
-               <button class="button-o navbar__button">Получить консультацию</button>
+               <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
             </div>
 
          </div>
@@ -58,13 +57,13 @@
          <div class="container">
             <h1 class="hero__title">Гарантия минимальной цены на скинали</h1>
             <span class="hero__subtitle">от 3 000 р/м2</span>
-            <button class="button hero__button">Заказать скинали</button>
+            <a href="#offer" class="button hero__button">Заказать скинали</a>
          </div>
       </div>
       <!-- /.hero -->
    </header>
    <main>
-      <section class="offer">
+      <section class="offer" id="offer">
          <div class="container">
             <div class="offer__block offer-block">
                <h2 class="offer__title">оставьте заявку на расчет</h2>
@@ -73,7 +72,14 @@
                   <div class="form__row">
                      <div class="form__group">
                         <label for="" class="form__label">Вид стекла</label>
-                        <input type="text" class="input form__input">
+                        <input type="hidden" name="type" class="input form__input" id="select-type" value="C печатью">
+                        <div class="select form__select">
+                           <div class="select__checked">C печатью</div>
+                           <ul class="select__dropdown">
+                              <li class="select__option" data-value="С печатью">С печатью</li>
+                              <li class="select__option" data-value="Без печати">Без печати</li>
+                           </ul>
+                        </div>
                      </div>
                      <div class="form__group">
                         <label for="" class="form__label">Ширина, см</label>
@@ -413,18 +419,59 @@
             </div>
          </div>
       </section>
+      <section class="section before">
+         <div class="container">
+            <h2 class="section__title section-title">До и после</h2>
+            <div class="before-slider">
+               <div class="before-slider__item">
+                  <div class="before-after">
+                     <img src="img/before/before.png" alt="">
+                     <img src="img/before/after.png" alt="">
+                  </div>
+               </div>
+               <div class="before-slider__item">
+                  <div class="before-after">
+                     <img src="img/before/before.png" alt="">
+                     <img src="img/before/after.png" alt="">
+                  </div>
+               </div>
+               <div class="before-slider__item">
+                  <div class="before-after">
+                     <img src="img/before/before.png" alt="">
+                     <img src="img/before/after.png" alt="">
+                  </div>
+               </div>
+            </div>
+            <!-- <div class="before-slider-arrows">
+               <button class="arrow arrow-left"><img src="img/before/left.png" alt=""></button>
+               <button class="arrow arrow-right"><img src="img/before/left.png" alt=""></button>
+            </div> -->
+         </div>
+      </section>
       <section class="section reviews">
          <div class="container">
             <h2 class="section-title section__title">Отзывы наших клиентов</h2>
             <div class="reviews-slider">
                <div class="reviews-slider__item">
-                  <div class="reviews-slider__text"> Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения,и удобное мобильное приложение.</div>
-                  <img src="img/reviews/reviews-img-1.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
+                  <div class="reviews-slider__text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...</div>
+                  <img src="img/reviews/reviews-img-2.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
+               </div>
+               <div class="reviews-slider__item">
+                     <div class="reviews-slider__text"> Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения,и удобное мобильное приложение.</div>
+                     <img src="img/reviews/reviews-img-1.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
+                  </div>
+               <div class="reviews-slider__item">
+                  <div class="reviews-slider__text">Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского.</div>
+                  <img src="img/reviews/reviews-img-3.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
                </div>
                <div class="reviews-slider__item">
                   <div class="reviews-slider__text">Очень часто мы сталкиваемся с недопониманием со стороны сотрудников банка, и иной раз идти не хочется...В очередной раз "навешают лапши на уши" и культурно пошлют...</div>
                   <img src="img/reviews/reviews-img-2.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
                </div>
+               <div class="reviews-slider__item">
+                     <div class="reviews-slider__text"> Девушка подобрала лучший вариант для меня, без первого взноса и с минимальной переплатой. У Банка очень много способов погашения,и удобное мобильное приложение.</div>
+                     <img src="img/reviews/reviews-img-1.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
+                  </div>
                <div class="reviews-slider__item">
                   <div class="reviews-slider__text">Хочу рассказать об опыте знакомства с Почта банком. Мне срочно были нужны деньги, а времени на сбор документов для кредита не было. Подруга посоветовала обратиться в офис Почта банка на ул. Тухачевского.</div>
                   <img src="img/reviews/reviews-img-3.png" alt="" class="reviews-slider__img"><span class="reviews-slider__name">Екатерина Иванова Москва</span>
@@ -442,7 +489,7 @@
                      <div class="form__group"><input class="input form__input" type="text" placeholder="Ваше имя"></div>
                      <div class="form__group"><input class="input form__input" type="tel" placeholder="Ваш телефон">
                      </div>
-                     <div class="form__group"><input class="input form__input" type="tel" placeholder="Ваша цена">
+                     <div class="form__group"><input class="input form__input" type="text" placeholder="Ваша цена">
                      </div>
                   </div>
                   <div class="form__row">
@@ -518,8 +565,15 @@
          </div>
       </div>
    </footer>
-   <!-- Spikmi widget -->
-   <!-- <script type="text/javascript" src="https://spikmi.com/Widget?Id=876"></script> -->
+
+   <script src="https://spikmi.com/Widget?Id=876"></script>
+   <script
+  src="js/jquery-2.2.4.js"></script>
+   <script src="js/jquery.event.move.js"></script>
+   <script src="js/jquery.twentytwenty.js"></script>
+   <script src="js/slick.min.js"></script>
+   <script src="js/jquery.maskedinput.js"></script>
+   <script src="js/script.js"></script>
 </body>
 
 </html>

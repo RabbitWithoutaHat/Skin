@@ -1,0 +1,51 @@
+.before
+   padding: 0 80px 120px
+   position: relative
+   @media (max-width: 768px)
+      padding: 0 40px 80px
+   @media (max-width: 480px)
+      padding: 0 0 80px
+   .slider
+      &-arrow
+         transform: translateY(-90%)
+         position: absolute
+         top: 50%
+         background-color: transparent
+         border: none
+         height: 70px
+         width: 40px
+         font-size: 50px
+         outline: none
+         cursor: pointer
+         opacity: 0.3
+      &-dots
+         list-style: none
+         display: flex
+         justify-content: center
+         padding: 0
+         margin-top: 22px
+         .slick-active
+            background-color: $primary
+         li
+            width: 10px
+            height: 10px
+            background-color: #d1d1d1
+            border-radius: 50%
+            margin: 5px
+
+         button
+            display: none
+   .slider-prev
+      left: -70px
+      @media (max-width: 768px)
+         left: -40px
+      @media (max-width: 480px)
+         left: 0
+         z-index: 2
+   .slider-next
+      right: -70px
+      @media (max-width: 768px)
+         right: -40px
+      @media (max-width: 480px)
+         right: 0
+         z-index: 2

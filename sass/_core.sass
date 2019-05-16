@@ -59,8 +59,43 @@ img
    padding-left: 30px
    border: 1px solid #dddddd
    @media (max-width: 1110px)
-      margin-bottom: 20px
       height: 60px
+.select
+   height: 80px
+   border: 1px solid #dddddd
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 20px
+      width: 20px
+      height: 20px
+      background: url('../img/form/arrow-down.png') no-repeat center
+   &:hover
+      cursor: pointer
+   &__checked
+      padding-left: 30px
+      line-height: 80px
+   &__dropdown
+      position: absolute
+      list-style: none
+      top: 80px
+      width: 100%
+      background-color: $white
+      border: 1px solid #dddddd
+      padding: 0
+      margin: 0
+      margin-top: -2px
+      display: none
+      &--open
+         display: block
+   &__option
+      padding: 20px
+      &:hover
+         background-color: $bg-secondary
+
 
 input[type="checkbox"]
    display: none
